@@ -1,9 +1,9 @@
 <h2>Total de productos: {{ products.length }}</h2>
 
-<div *ngFor="let product of products">
+<div *ngFor="let product of products; index as productId">
 
   <h3>
-    <a [title]="'Ver productos de ' + product.name">
+    <a [title]="'Ver productos de ' + product.name" [routerLink]="['/products', productId]">
       {{ product.name }}
     </a>
   </h3>
